@@ -1,0 +1,7 @@
+DROP DATABASE IF EXISTS tasks;
+
+CREATE DATABASE tasks;
+
+USE tasks;
+
+CREATE TABLE tasks (id INT NOT NULL AUTO_INCREMENT, title VARCHAR(50), description VARCHAR(100), completed TINYINT, PRIMARY KEY (id));

@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  server:
+    build: .
+    image: "spring-boot"
+    container_name: spring-container
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysqldb
+    env_file:
+      - ./target/classes/.env
+  mysqldb:
+    image: "mysql:8"
+    container_name: mysql-container
+    ports:
+      - 3307:3306
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: tasks
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 5678
+    restart: always
