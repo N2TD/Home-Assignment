@@ -21,7 +21,7 @@ Authorizations:
 	Password: password
 
 * Note: 
-- The user 'user' can only access GET endpoints, whereas the user 'admin' can access all enpoints!
+- The user 'user' can only access GET endpoints, whereas the user 'admin' can access all endpoints!
 
 1. Get a list of all tasks
 
