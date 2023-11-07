@@ -13,7 +13,7 @@ Steps to run application:
 
 
 ## TEST API ========================================================
-Authorizations:
+Accounts for authentication & authorization:
 	Username: user
 	Password: password
 	
@@ -21,7 +21,7 @@ Authorizations:
 	Password: password
 
 * Note: 
-- The user 'user' can only access GET endpoints, whereas the user 'admin' can access all endpoints!
+- The account 'user' can only access GET endpoints, whereas the account 'admin' can access all endpoints!
 - Datatable is empty at the beginning
 
 1. GET LIST OF ALL TASKS
