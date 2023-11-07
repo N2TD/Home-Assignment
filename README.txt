@@ -1,8 +1,8 @@
 ## RUN APPLICATION ON WINDOW ENVIRONTMENT ==========================
 Prerequisites: 
-	Docker Desktop (version 4.25.0 recommened) installed
-	Enable Docker support in WSL 2 distros
-	IntelliJ IDEA installed
+	- Docker Desktop (version 4.25.0 recommened) installed
+	- Enable Docker support in WSL 2 distros
+	- IntelliJ IDEA installed
 
 Steps to run application:
 	- Pull project from GitHub
