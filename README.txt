@@ -1,18 +1,18 @@
-## RUN APPLICATION ON WINDOW ENVIRONTMENT ==================================
+## RUN APPLICATION ON WINDOW ENVIRONTMENT ==========================
 Prerequisites: 
 	Docker Desktop (version 4.25.0 recommened) installed
-	Enabling Docker support in WSL 2 distros
+	Enable Docker support in WSL 2 distros
 	IntelliJ IDEA installed
 
 Steps to run application:
-	- Upzip the Assignment.zip
+	- Pull project from GitHub
+	- Upzip the Home-Assignment.zip
 	- Open project by IntelliJ
 	- Go to Maven -> tasks -> Lifecycle -> install
 	- Go to the terminal, type the command: docker-compose up -d
-	- Open Postman and test API at localhost:8080
 
 
-## TEST API ================================================================
+## TEST API ========================================================
 Authorizations:
 	Username: user
 	Password: password
@@ -22,16 +22,17 @@ Authorizations:
 
 * Note: 
 - The user 'user' can only access GET endpoints, whereas the user 'admin' can access all endpoints!
+- Datatable is empty at the beginning
 
-1. Get a list of all tasks
+1. GET LIST OF ALL TASKS
 
 	localhost:8080/api/tasks
 	
-	@Authorization:
+	@Authorization (Basic Auth):
 		- username: user/admin
 		- password: password
 
-2. Create a new task
+2. CREARE A NEW TASK
 	
 	localhost:8080/api/tasks
 	
@@ -39,22 +40,22 @@ Authorizations:
 		- title
 		- description
 
-	@Authorization:
+	@Authorization (Basic Auth):
 		- username: admin
 		- password: password
 
-3.  Get a single task by ID
+3.  GET A SINGLE TASK BY UD
 
 	localhost:8080/api/tasks/{id} --> Example: localhost:8080/api/tasks/2 (get a task with ID 2)
 
 	@Pathvariable:
 		- id
 	
-	@Authorization:
+	@Authorization (Basic Auth):
 		- username: user/admin
 		- password: password
 
-4. Update a task by ID
+4. UPDATE A TASK BY ID
 	
 	localhost:8080/api/tasks/{id} --> Example: localhost:8080/api/tasks/2 (update a task with ID 2)	
 
@@ -66,17 +67,17 @@ Authorizations:
 		- description
 		- completed
 
-	@Authorization:
+	@Authorization (Basic Auth):
 		- username: admin
 		- password: password
 
-5. Delete a task by ID
+5. DELETE A TASK BY ID
 	
 	localhost:8080/api/tasks/{id} --> Example: localhost:8080/api/tasks/2 (delete a task with ID 2)
 
 	@Pathvariable:
 		- id
 	
-	@Authorization:
+	@Authorization (Basic Auth):
 		- username: admin
 		- password: password
